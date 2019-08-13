@@ -1,0 +1,166 @@
+.first{
+    /* margin-top: 1000px; */
+    height: 200px;
+    width: 80%;
+    background-image: url("img/t.jpg");
+    background: rgb(255, 255, 255);
+   
+    border: 1px solid grey;
+    box-shadow: 0px 0px 50px grey;
+    transition: width 2s, height 2s,  transform 3s;
+    animation-name: my;
+    animation-duration: 1s;
+    /* border-radius: 50%; */
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    /* animation-direction: alternate; */
+    animation-timing-function: linear;
+    /* animation-fill-mode: forwards; */
+   
+}
+@keyframes my{
+    0%{background: #fff;transform:  rotate( 0deg);}
+   
+    25%{background: red;transform:  rotate( 90deg);}
+    50%{background: green;transform:  rotate( 180deg);}
+    75%{background: blue;transform:  rotate( 270deg);}
+    100%{background: #fff;transform:  rotate( 360deg);}
+}
+
+.no-border:focus{
+    border-color:  red;
+    box-shadow: 0px 10px 20px red;
+    outline: 10px red;
+}
+/* @keyframes my{
+    0%{transform:  rotate( 0deg);}
+    25%{transform:  rotate( 90deg);}
+    50%{transform:  rotate( 180deg);}
+    75%{transform:  rotate( 270deg);}
+    100%{transform:  rotate( 360deg);}
+} */
+.first:hover{
+    background: rgb(255, 255, 255);
+    transform: rotateX(180deg);
+    
+    /* transform-style: preserve-3d; */
+    /* transition: width 2s, height 2s, linear  transform 2s; */
+    /* transition: width 2s linear 1s; */
+    
+}
+.dbox{
+   
+    border:solid 1px green;
+
+}
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    #sidebar{
+        position: fixed;
+        height: 100%;
+        width: 177px;
+        z-index: 1;
+      
+       
+        left: -200px;
+        transition: left 200ms linear;
+        animation-fill-mode: backwards;
+    }
+    .res{
+        height: 20px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #sidebar{
+        position: fixed;
+        height: 100%;
+        width: 177px;
+        z-index: 1;
+       
+      
+        left: -100px;
+        transition: left 200ms linear;
+        animation-fill-mode: backwards;
+    }
+    .res{
+        height: 20px;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #sidebar{
+        position: fixed;
+        height: 100%;
+        width: 177px;
+        z-index: 1;
+       
+       
+        left: -200px;
+        transition: left 200ms linear;
+        animation-fill-mode: backwards;
+    }
+    .res{
+        height: 20px;
+    }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #sidebar{
+        position: fixed;
+        height: 100%;
+        width: 177px;
+        z-index: 1;
+       
+        
+        left: -200px;
+        transition: left 200ms linear;
+        animation-fill-mode: backwards;
+    }
+    .res{
+        height: 30px;
+    }
+ }
+.login{
+    width: 250px;
+}
+
+#sidebar.active{
+    left: 0px;
+}
+
+#sidebar > .list > .item{
+    color: rgb(0, 0, 0);
+    padding: 10px 8px;
+   border-bottom: 1px solid rgb(0, 132, 255);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    /* text-align: left; */
+    
+}
+#sidebar > .list > .item > a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    margin-left:20px ;
+    inline-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#toggle-btn{
+    cursor: pointer;
+}
+#toggle-btn span{
+ width: 25px;
+ height: 3px;   
+ background: rgb(255, 255, 255);
+ display: block;
+ cursor: pointer;
+ margin: 4px 0px;
+}

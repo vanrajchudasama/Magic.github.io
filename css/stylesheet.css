@@ -1,0 +1,48 @@
+.form-container{
+    /* position: absolute; */
+    top: 20px;
+    padding: 30px;
+    /* border-radius: 10px; */
+    box-shadow: 0px 0px 20px grey;
+}
+.bg{
+   background: url("../img/back.jpg");
+   color: #fff;  
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+    /* background-size: cover; */
+}
+.register-container{
+    padding: 15px;
+    box-shadow: 0px 0px 15px grey;
+    transition: width 2s, height 2s,  transform 3s;
+    animation: vibrate;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: 2; 
+    /* animation-fill-mode: forwards; */
+    animation-timing-function: linear;
+}
+@keyframes vibrate{
+    0%{transform:  rotateZ(   -5deg);}
+    25%{transform:  rotateZ(  5deg);}
+    50%{transform:  rotateZ(  -5deg);}
+    75%{transform:  rotateZ( 5deg);}
+    100%{transform:  rotateZ( 0deg);}
+}
+
+.custom-control-label:focus{
+    border:none;
+}
+.custom-control-label:before{
+    background-color:rgb(255, 255, 255);
+  }
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:rgb(255, 166, 0);
+  }
+  .no-border:focus{
+    border-color:  none;
+    box-shadow: none;
+    outline: none;
+}
