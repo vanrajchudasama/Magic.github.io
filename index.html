@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <title>Magic Videos</title>
 </head>
 
@@ -37,33 +38,43 @@
 
     <!-- </nav> -->
     <!--Start navigation -->
-    <nav class="navbar shadow navbar-expand-lg navbar-dark bg-primary sticky-top ">
+    <nav class="navbar shadow navbar-expand-sm navbar-dark bg-primary sticky-top ">
         <div class="container-fluid">
             <div id="toggle-btn" class="mr-3" onclick="togglesidebar()">
                 <span class="btn-s"></span>
                 <span class="btn-s"></span>
                 <span class="btn-s"></span>
             </div>
-            <a href="#" class="navbar brand">
+            <a href="#" class="navbar brand mr-5">
                 <img src="img/S.png" height="40px" alt="">
             </a>
-            <form action="#" class="form-inline">
-                <input type="search" class="form-control" title="Search" placeholder="Search">
+            <form action="#" class="form-inline px-2 ml-5  clearfix rounded-pill bg-white " style="width: 45%;">
+                <input type="search" class="form-control float-left rounded-pill m-0" style="width: 92%;;border:none;box-shadow: none;outline: none;" title="Search" placeholder="Search">
+                <button class="btn  btn-sm  float-right  text-white  rounded-pill" type="submit">
+                    <img src="img/search_blue.png" alt="" class="img-fluid">
+                </button>
             </form>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mr-3">
                     <a href="#" class="nav-link"><img class="res" title="Upload Video" src="img/video.png"></a>
                 </li>
-                <li class="nav-item mr-3">
-                    <a href="#" class="nav-link"><img class="res" title="Upload Video" src="img/alert.png"></a>
+                <li class="nav-item mr-3 ">
+                   
+                            <a href="#" class="nav-link position-relative ">
+                                <img class="res" title="Upload Video" src="img/alert.png">
+                                <span class="badge badge-danger position-absolute badge-pill"
+                                    style="top:1px;right:0px;font-size-adjust: inherit">9</span>
+                            </a>
+                           
                 </li>
-                <li class="nav-item mr-3 active" data-toggle="model" data-target="#login">
-                  
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-                                   
-                                <img class="res" title=" Login / Register" src="img/user.png"> Login / Register
-                                  </button>
-                    
+                <li class="nav-item mr-3 active " data-toggle="model" data-target="#login">
+
+                    <button type="button" class="btn btn-outline-light text-white" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">
+
+                        <img class="res" title=" Login / Register" src="img/user.png"> SIGN IN
+                    </button>
+
                 </li>
                 <!-- <li class="nav-item">
                         <a href="#" class="nav-link">About</a>
@@ -114,51 +125,60 @@
     <!-- end sidebar -->
     <div id="sidebar" class="bg-light">
         <div class="list">
-            <div class="item"><a href="#" class="align-bottom"> <img src="img/home.png" alt="" height="25px" width="25px" class="img-fluid mr-3">Home</a></div>
-            <div class="item"><a href="#" class=""> <img src="img/popular.png" alt=""  class="img-fluid mr-3">Popular</a></div>
-            <div class="item"><a href="#" class=""><img src="img/latest.png" alt=""  class="img-fluid mr-2">Latest</a></div>
-            <div class="item"><a href="#" class=""><img src="img/trending.png" alt=""  class="img-fluid mr-2">Trending</a></div>
+            <div class="item"><a href="#" class=""> <img src="img/home.png" alt="" height="25px"
+                        width="25px" class="img-fluid mr-3">Home</a></div>
+            <div class="item"><a href="#" class=""> <img src="img/popular.png" alt="" class="img-fluid mr-3">Popular</a>
+            </div>
+            <div class="item"><a href="#" class=""><img src="img/latest.png" alt="" class="img-fluid mr-2">Latest</a>
+            </div>
+            <div class="item"><a href="#" class=""><img src="img/trending.png" alt=""
+                        class="img-fluid mr-2">Trending</a></div>
         </div>
     </div>
     <div class="container">
         <div class="row">
+            <div class="col-sm-8">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
 
-            <div class="modal fade" id="login" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-dialog-scrollable" role="document">
-                            <div class="modal-content">
-                                    <div class="modal-body">
-                <div class="row justify-content-center">
-                    <div class=" col-12 col-xl-3 col-sm-6 col-md-5  justify-content-center">
-                        <form action="#" class="rounded mt-5 bg form-container mb-5">
-                            <!-- <h1 class="text-center ">Login</h1> -->
-                            <div class="text-center">
-                                <img src="img/S.png" alt="" class="img-fluid">
+                            <div class="modal-body">
+                                <form action="#" class="rounded bg-primary text-white form-container mb-5">
+                                    <!-- <h1 class="text-center ">Login</h1> -->
+                                    <div class="text-center">
+                                        <img src="img/S.png" alt="" class="img-fluid">
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label for="">Email Address</label>
+                                        <input type="email" class="no-border form-control" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Password</label>
+                                        <input type="password" class="no-border form-control"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Check this custom
+                                                checkbox</label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn-block btn btn-outline-light">Login</button>
+                                    <button type="button" class="btn btn-outline-light btn-block" data-dismiss="modal"
+                                        aria-label="Close">Close</button>
+                                    <div class="text-center mt-2">You are not a member ?<a href="#"
+                                            class="text-white text-center"> <strong>Register now</strong></a></div>
+                                </form>
                             </div>
-                            <hr>
-                            <div class="form-group">
-                                <label for="">Email Address</label>
-                                <input type="email" class="no-border form-control" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Password</label>
-                                <input type="password" class="no-border form-control" placeholder="Enter Password">
-                            </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn-block btn btn-dark">Login</button>
-                            <button type="button" class="btn btn-danger btn-block"><a href="../Magic.html"
-                                    class="text-white">Back</a></button>
-                        </form>
+
+                        </div>
                     </div>
                 </div>
-                </div>
-                </div>
-                </div>
             </div>
+           
         </div>
     </div>
 
